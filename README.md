@@ -19,7 +19,7 @@ Spruce is a configurable node.js logging library. Its coolest feature is the abi
     var spruce = require('spruce').init(options);
     spruce.error('My eyes! The goggles do nothing!');
 
-and then all of your developers will get an email from McBain deploring the quality of his optical protection.  Perhaps you should
+and then all of your developers will get an email from McBain deploring the quality of his optical protection. 
 
 Usage
 -----
