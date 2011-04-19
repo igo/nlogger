@@ -24,7 +24,7 @@ Options
 -------
 Here are the default options:
 
-var defaultOptions = {
+    var defaultOptions = {
             
             'dateFormat' : '[%m-%d-%y %H:%M:%S.%l]',
             'methods' : {
@@ -46,14 +46,17 @@ var defaultOptions = {
                 },
             'moduleName' : null,
             'useColor' : false,
-};
+    };
 
-'dateFormat' is the string used to specify how the date should appear.
+'dateFormat' is the string used to specify how the date should appear. it uses standard strftime
+options, although i did not implement day of the year (%j) or week of the year (%u). 
+
+'methods' is a list of log methods you want to have in your logging system. 
 
 'moduleName' is used to print the name of the module where the error occured.
 if moduleName is null, only the file and line where the error occurred is stored.
 
-'methods' is a list of log methods to be constructed. Each method has the following options:
+'useColor' determines whether to use awesome colors in the terminal, or boring plain text.
 
 Method Options
 ----- 
@@ -63,16 +66,6 @@ Method Options
 
 'handlers': a dictionary of key - > function (msg). each function is called with the given message whenever that log method is called.
 
-
-Samples 
--------
-
-Just the default settings:
-    [4-18-2011 17:57:48.220] INFO   - this is a info
-    [4-18-2011 17:57:48.220] TRACE [tests.js:15:38] - this is a trace
-    [4-18-2011 17:57:48.220] DEBUG [tests.js:15:38] - this is a debug
-    [4-18-2011 17:57:48.220] WARN  [tests.js:15:38] - this is a warn
-    [4-18-2011 17:57:48.220] ERROR [tests.js:15:38] - this is a error
 
 -------
 Released under MIT License. Enjoy and Fork!
