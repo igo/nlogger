@@ -27,13 +27,11 @@ var opts = {'useColor' : true,
                         'sextra' : { 
                                      'lineNum' : true},
                         'error' : {'color' : 36,
-                                    'handlers' : {
-                                    'jimbob' : function (msg) {
-                                            console.log ('Emailing about "'+msg+
-                                            '"');
-                                        }
-                                    } 
-                                },
+                                    'handlers':  
+                                     [ function (msg) {
+                            console.log ('Emailing about "'+msg+'"');
+                                        }],
+                                    },
                         },
             'moduleName' : 'fancyPants',
             };
