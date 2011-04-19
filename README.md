@@ -63,13 +63,15 @@ options, although I did not implement day of the year (%j) or week of the year (
 'methods' is a list of log methods you want to have in your logging system. If you like, you can 
 add other methods to this list, so that you could do something like
     
-    var move = 
+    var move = function(zig) { //for great justice! }; 
+
     var spruce = require('spruce').init({'methods' : {'cats': { handlers : { 'zig' : move}}}}); 
+
     if (someoneSetUpUsTheBomb())
         spruce.cats('Main Screen Turn on!')
 
 
-and then 
+... and then the zig will move when the bomb is set up. 
  
 
 'moduleName' is used to print the name of the module where the error occured.
@@ -86,5 +88,6 @@ Method Options
 'handlers': a dictionary of key - > function (msg). each function is called with the given message whenever that log method is called.
 
 
+License
 -------
-Released under MIT License. Enjoy and Fork!
+MIT License. Enjoy and Fork!
