@@ -23,7 +23,12 @@ and then all of your developers will get an email from McBain deploring the qual
 
 Usage
 -----
-Download and add to your code (npm coming soon!):
+
+Download and add to your code, or use npm:
+
+    npm install spruce
+
+Then, do this:
 
     var spruce = require('spruce').init();
 
@@ -119,4 +124,4 @@ MIT License. Enjoy and Fork!
 
 Credits
 --------
-Based upon node-logger by igo. 
+Based upon [node-logger by igo](https://github.com/igo/node-logger).
