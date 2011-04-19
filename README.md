@@ -1,47 +1,75 @@
-node-logger
+spruce
 ===========
 
-node-logger is a Node.js logging library that prints module name, current line number and also your messages :) Furthermore it gives you an option to print messages in color.
+spruce is a Node.js a configurablelogging library.
 
 
 Usage
 -----
 Download and add to your code:
 
-	var logger = require('node-logger').logger(module [, useColor]);
-
-*module* is object defined automatically by nodejs. Don't bother with it, just always type *module*.
+    var spruce = require('spruce').init(options);
 
 Examples
 --------
 
-	var logger = require('node-logger').logger(module);
-	logger.info('Info message');
-	logger.debug('Debug message');
-	logger.warn('Warning message');
-	logger.error('Error message');
-	logger.trace('Trace message');
+    var logger = require('node-logger').init();
+    logger.info('Info message');
+    logger.debug('Debug message');
+    logger.warn('Warning message');
+    logger.error('Error message');
+    logger.trace('Trace message');
 
-To print messages in color init logger with useColor set to true:
+Options 
+-------
+Here are the default options:
 
-	var logger = require('node-logger').logger(module, true);
+var defaultOptions = {
+            
+            'dateFormat' : '[%m-%d-%y %H:%M:%S.%l]',
+            'methods' : {
+                'info' : {'lineNum' : false,
+                            'color' : 30,
+                            'handlers': {}},
+                'trace' : {'lineNum' : true,
+                            'color' : 30,
+                            'handlers': {}},
+                'debug' : {'lineNum' : true,
+                            'color' : 34,
+                            'handlers' : {}},
+                'warn' : {'lineNum' : true,
+                         'color' : 35,
+                        'handlers' :{}},
+                'error': {'lineNum' : true,
+                          'color' :  31,
+                          'handlers' : {}},
+                },
+            'moduleName' : null,
+            'useColor' : false,
+};
 
-	
-Output samples
---------------
+'dateFormat' is the string used to specify how the date should appear.
 
-	2010-10-02 20:39:03.570 INFO  main:5 - Info message
-	2010-10-02 20:39:03.588 DEBUG main:6 - Debug message
-	2010-10-02 20:39:03.589 WARN  main:7 - Warning message
-	2010-10-02 20:39:03.590 ERROR main:8 - Error message
-	2010-10-02 20:39:03.590 TRACE main:9 - Trace message
-	
-	2010-10-02 20:59:12.496 INFO  my-modules/first:3 - Message from first module from line #3
-	2010-10-02 20:59:12.514 INFO  my-modules/second:10 - Message from second module from line #10
-	2010-10-02 20:59:12.515 INFO  fake-module-name:3 - Message from third module from line #3
-	2010-10-02 20:59:12.516 INFO  <unknown>:3 - Message from fourth module from line #3
-	
+'moduleName' is used to print the name of the module where the error occured.
+if moduleName is null, only the file and line where the error occurred is stored.
 
-License
+'methods' is a list of log methods to be constructed. Each method has the following options:
+
+Method Options
+----- 
+'color': what color to display this text in, if useColor is enabled.
+'lineNum': whether to compute a stack trace to get the line number.
+'handlers': a dictionary of key - > function (msg). each function is called
+with the given message whenever that log method is called.
+
+Samples 
+-------
+Just the default settings:
+[4-18-2011 17:57:48.220] INFO   - this is a info
+[4-18-2011 17:57:48.220] TRACE [tests.js:15:38] - this is a trace
+[4-18-2011 17:57:48.220] DEBUG [tests.js:15:38] - this is a debug
+[4-18-2011 17:57:48.220] WARN  [tests.js:15:38] - this is a warn
+[4-18-2011 17:57:48.220] ERROR [tests.js:15:38] - this is a error
+
 -------
 Released under MIT License. Enjoy and Fork!

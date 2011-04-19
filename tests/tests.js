@@ -12,15 +12,7 @@ function testThemAll(){
 
 testThemAll();
 
-function notADate(){
-    return 'LOL @ U';
-}
-var opts = {'useColor' : false,
-            'dateFormat' : '[%% %f %S %M %H %I '+
-                            '%d %w %a %A %m %b %B %y %Y %z]'};
-
-logger = require('../lib/spruce.js').init(module,
-                                                opts); 
+logger = require('../lib/spruce.js').init(); 
 
 testThemAll();
 
@@ -42,9 +34,9 @@ var opts = {'useColor' : true,
                                         }
                                     } 
                                 },
-                        }
+                        },
+            'moduleName' : 'fancyPants',
             };
 
-logger = require('../lib/spruce.js').init(module,
-                                                opts); 
+logger = require('../lib/spruce.js').init(opts); 
 testThemAll();
