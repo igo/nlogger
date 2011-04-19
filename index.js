@@ -1,1 +1,1 @@
-module.exports = require('./lib/spruce;
+module.exports = require('./lib/spruce');
