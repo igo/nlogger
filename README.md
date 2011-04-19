@@ -62,9 +62,14 @@ options, although I did not implement day of the year (%j) or week of the year (
 
 'methods' is a list of log methods you want to have in your logging system. If you like, you can 
 add other methods to this list, so that you could do something like
-
+    
+    var move = 
+    var spruce = require('spruce').init({'methods' : {'cats': { handlers : { 'zig' : move}}}}); 
     if (someoneSetUpUsTheBomb())
         spruce.cats('Main Screen Turn on!')
+
+
+and then 
  
 
 'moduleName' is used to print the name of the module where the error occured.
