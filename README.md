@@ -1,21 +1,21 @@
-node-logger
+nlogger
 ===========
 
-node-logger is a Node.js logging library that prints module name, current line number and also your messages :) Furthermore it gives you an option to print messages in color.
+nlogger (formerly node-logger) is a Node.js logging library that prints module name, current line number and also your messages :) Furthermore it gives you an option to print messages in color.
 
 
 Usage
 -----
 Download and add to your code:
 
-	var logger = require('node-logger').logger(module [, useColor]);
+	var logger = require('nlogger').logger(module [, useColor]);
 
 *module* is object defined automatically by nodejs. Don't bother with it, just always type *module*.
 
 Examples
 --------
 
-	var logger = require('node-logger').logger(module);
+	var logger = require('nlogger').logger(module);
 	logger.info('Info message');
 	logger.debug('Debug message');
 	logger.warn('Warning message');
@@ -24,7 +24,7 @@ Examples
 
 To print messages in color init logger with useColor set to true:
 
-	var logger = require('node-logger').logger(module, true);
+	var logger = require('nlogger').logger(module, true);
 
 	
 Output samples

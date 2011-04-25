@@ -1,2 +1,2 @@
 
-module.exports = require('./lib/node-logger');
+module.exports = require('./lib/nlogger');

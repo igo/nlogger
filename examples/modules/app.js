@@ -1,6 +1,6 @@
 require.paths.unshift('../../lib');
 
-var logger = require('node-logger').logger(module);
+var logger = require('nlogger').logger(module);
 var first = require('./my-modules/first');
 var second = require('./my-modules/second');
 var third = require('./my-modules/third');

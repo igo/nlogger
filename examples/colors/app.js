@@ -1,6 +1,6 @@
 require.paths.unshift('../../lib');
 
-var logger = require('node-logger').logger(module, true);
+var logger = require('nlogger').logger(module, true);
 
 logger.info('Info message');
 logger.debug('Debug message');

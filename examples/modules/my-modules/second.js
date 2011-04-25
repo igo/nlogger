@@ -1,4 +1,4 @@
-var logger = require('node-logger').logger(module);
+var logger = require('nlogger').logger(module);
 
 // some dummy empty lines
 
