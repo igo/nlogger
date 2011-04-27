@@ -6,11 +6,11 @@ nlogger (formerly node-logger) is a Node.js logging library that prints module n
 
 Usage
 -----
-Download and add to your code:
+Use npm or download. Then add to your code:
 
 	var logger = require('nlogger').logger(module [, useColor]);
 
-*module* is object defined automatically by nodejs. Don't bother with it, just always type *module*.
+*module* is object defined automatically by nodejs. Don't bother with it, just always type *module*. Optional parameter *useColor* can be set to true if you want print messages in color.
 
 Examples
 --------
