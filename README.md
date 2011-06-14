@@ -1,16 +1,16 @@
 nlogger
 ===========
 
-nlogger (formerly node-logger) is a Node.js logging library that prints module name, current line number and also your messages :) Furthermore it gives you an option to print messages in color.
+nlogger (formerly node-logger) is a Node.js logging library that prints messages with module name, current line number and can print messages in color and can be configured from file.
 
 
 Usage
 -----
 Use npm or download. Then add to your code:
 
-	var logger = require('nlogger').logger(module [, useColor]);
+	var logger = require('nlogger').logger(module);
 
-*module* is object defined automatically by nodejs. Don't bother with it, just always type *module*. Optional parameter *useColor* can be set to true if you want print messages in color.
+*module* is object defined automatically by nodejs. Don't bother with it, just always type *module*.
 
 Examples
 --------
@@ -21,10 +21,6 @@ Examples
 	logger.warn('Warning message');
 	logger.error('Error message');
 	logger.trace('Trace message');
-
-To print messages in color init logger with useColor set to true:
-
-	var logger = require('nlogger').logger(module, true);
 
 	
 Output samples
@@ -41,6 +37,31 @@ Output samples
 	2010-10-02 20:59:12.515 INFO  fake-module-name:3 - Message from third module from line #3
 	2010-10-02 20:59:12.516 INFO  <unknown>:3 - Message from fourth module from line #3
 	
+
+Configuration
+-------------
+nlogger tries load configuration file nlogger.json which looks like:
+
+	{
+		"color": "auto",
+		"level": {
+			"*": "debug",
+			"my-modules/first": "info"
+		}
+	}
+	
+* color - print message in color? [true, false, "auto"]
+* level.* - default debug level
+* level.yourModuleName - debug level for specified module
+
+Possible debug levels are trace, debug, info, warn, error.
+
+Changes
+-------
+0.2.0 - Added configuration file support
+
+0.1.0 - First npm release
+
 
 License
 -------

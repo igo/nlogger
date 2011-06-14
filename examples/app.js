@@ -1,4 +1,4 @@
-require.paths.unshift('../../lib');
+require.paths.unshift('../lib');
 
 var logger = require('nlogger').logger(module);
 var first = require('./my-modules/first');
@@ -11,3 +11,4 @@ setTimeout(function() {
 }, 1000);
 
 logger.info('Info message');
+logger.warn('Exiting');
