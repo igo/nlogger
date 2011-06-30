@@ -1,3 +1,3 @@
-var logger = require('nlogger').logger('fake-module-name');
+var logger = require('nlogger').logger();
 
-logger.info('Message from third module from line #3');
+logger.info('Ops! We forgot module name in this file');

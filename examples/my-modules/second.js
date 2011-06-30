@@ -1,10 +1,3 @@
-var logger = require('nlogger').logger(module);
+var logger = require('nlogger').logger('my-custom-name');
 
-// some dummy empty lines
-
-
-
-
-
-
-logger.info('Message from second module from line #10');
+logger.info('Message from second module with defined module name');

@@ -1,7 +1,12 @@
 nlogger
 ===========
 
-nlogger (formerly node-logger) is a Node.js logging library that prints messages with module name, current line number and can print messages in color and can be configured from file.
+nlogger is a Node.js logging library that can
+
+* print messages with module name and current line number so you know from where it was called
+* print messages in color
+* print parameters in message
+* be configured from file
 
 
 Usage
@@ -10,7 +15,12 @@ Use npm or download. Then add to your code:
 
 	var logger = require('nlogger').logger(module);
 
-*module* is object defined automatically by nodejs. Don't bother with it, just always type *module*.
+*module* is object defined automatically by Node.js. If you don't want automatic module names, replace it with your desired string name.
+
+	logger.info(message);
+	logger.info(message, parameter...);
+
+Strings `{}` in message will be replaced by appropriate parameter. See examples.  
 
 Examples
 --------
@@ -21,6 +31,7 @@ Examples
 	logger.warn('Warning message');
 	logger.error('Error message');
 	logger.trace('Trace message');
+	logger.info('Array = {}, Object = {}', [1, 2, 3, 4], {one: 1, two: 2});
 
 	
 Output samples
@@ -31,6 +42,7 @@ Output samples
 	2010-10-02 20:39:03.589 WARN  main:7 - Warning message
 	2010-10-02 20:39:03.590 ERROR main:8 - Error message
 	2010-10-02 20:39:03.590 TRACE main:9 - Trace message
+	2010-10-02 20:39:03.590 INFO  main:10 - Array = [ 1, 2, 3, 4 ], Object = { one: 1, two: 2 }
 	
 	2010-10-02 20:59:12.496 INFO  my-modules/first:3 - Message from first module from line #3
 	2010-10-02 20:59:12.514 INFO  my-modules/second:10 - Message from second module from line #10
@@ -40,7 +52,7 @@ Output samples
 
 Configuration
 -------------
-nlogger tries load configuration file nlogger.json which looks like:
+nlogger can load optional configuration file nlogger.json which looks like:
 
 	{
 		"color": "auto",
@@ -50,14 +62,16 @@ nlogger tries load configuration file nlogger.json which looks like:
 		}
 	}
 	
-* color - print message in color? [true, false, "auto"]
-* level.* - default debug level
-* level.yourModuleName - debug level for specified module
+* `color` - print message in color? [true, false, "auto"]
+* `level.*` - default debug level
+* `level.yourModuleName` - debug level for specified module
 
-Possible debug levels are trace, debug, info, warn, error.
+Possible debug levels are `trace`, `debug`, `info`, `warn`, `error`.
 
 Changes
 -------
+0.3.0 - Added parameters support to logging methods
+
 0.2.0 - Added configuration file support
 
 0.1.0 - First npm release
