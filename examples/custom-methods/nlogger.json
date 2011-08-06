@@ -1,0 +1,16 @@
+{
+	"color": "auto",
+	"methods": {
+		"lowest":  { "color": "cyan",    "priority": 1 },
+		"four":    { "color": "blue",    "priority": 4 },
+		"mid":     { "color": "green",   "priority": 3 },
+		"two":     { "color": "yellow",  "priority": 2 },
+		"highest": { "color": "boldRed", "priority": 5 }
+	},
+	"level": {
+		"*": "two",
+		"my-custom-modules/first": "mid",
+		"customName":              "lowest",
+		"main":                    "two"
+	}
+}
