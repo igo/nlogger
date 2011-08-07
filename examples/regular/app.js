@@ -1,4 +1,4 @@
-require.paths.unshift('../lib');
+require.paths.unshift('../../lib');
 
 var logger = require('nlogger').logger(module);
 var first = require('./my-modules/first');
