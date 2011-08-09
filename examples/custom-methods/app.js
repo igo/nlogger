@@ -4,6 +4,7 @@ var logger = require('nlogger').logger(module);
 var first = require('./my-custom-modules/first');
 var second = require('./my-custom-modules/second');
 var third = require('./my-custom-modules/third');
+var all = require('./my-custom-modules/all');
 
 setTimeout(function() {
 	logger.two('Timed log');

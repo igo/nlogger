@@ -10,8 +10,9 @@
 	},
 	"level": {
 		"*": "two",
+		"main":                    "two",
 		"my-custom-modules/first": "mid",
 		"customName":              "lowest",
-		"main":                    "test"
+		"my-custom-modules/all":   "test"
 	}
 }
