@@ -12,3 +12,7 @@ setTimeout(function() {
 logger.lowest('Not printed'); // too low of priority
 logger.mid('Info message');
 logger.four('Exiting');
+
+if (logger.isTest) {
+  logger.test('runs on logLevel==test only');
+}

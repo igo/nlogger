@@ -1,16 +1,17 @@
 {
 	"color": "auto",
 	"methods": {
-		"lowest":  { "color": "cyan",    "priority": 1 },
-		"four":    { "color": "blue",    "priority": 4 },
-		"mid":     { "color": "green",   "priority": 3 },
-		"two":     { "color": "yellow",  "priority": 2 },
-		"highest": { "color": "boldRed", "priority": 5 }
+		"test":    { "color": "magenta", "priority": 1 },
+		"lowest":  { "color": "cyan",    "priority": 2 },
+		"four":    { "color": "blue",    "priority": 5 },
+		"mid":     { "color": "green",   "priority": 4 },
+		"two":     { "color": "yellow",  "priority": 3 },
+		"highest": { "color": "boldRed", "priority": 6 }
 	},
 	"level": {
 		"*": "two",
 		"my-custom-modules/first": "mid",
 		"customName":              "lowest",
-		"main":                    "two"
+		"main":                    "test"
 	}
 }
