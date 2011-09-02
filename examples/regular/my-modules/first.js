@@ -8,7 +8,7 @@ logger.info('One = {}, two = {}, 3 = {}, four = {}', 1, 2, 'three', 4);
 logger.info('Array = {}, Object = {}', [1, 2, 3, 4], {one: 1, two: 2});
 
 try {
-	throw new Error('Throwing sample error');
+  throw new Error('Throwing sample error');
 } catch(e) {
-	logger.error('Something went wrong! Catched {}', e.message);
+  logger.error('Something went wrong! Catched {}', e.message);
 }

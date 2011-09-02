@@ -1,7 +1,7 @@
 {
-	"color": "auto",
-	"level": {
-		"*": "debug",
-		"my-modules/first": "info"
-	}
+  "color": "auto",
+  "level": {
+    "*": "debug",
+    "my-modules/first": "info"
+  }
 }

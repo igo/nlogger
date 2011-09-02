@@ -6,7 +6,7 @@ var second = require('./my-modules/second');
 var third = require('./my-modules/third');
 
 setTimeout(function() {
-	logger.debug('Timed log');
+  logger.debug('Timed log');
 }, 1000);
 
 logger.info('Info message');

@@ -7,7 +7,7 @@ var third = require('./my-custom-modules/third');
 var all = require('./my-custom-modules/all');
 
 setTimeout(function() {
-	logger.two('Timed log');
+  logger.two('Timed log');
 }, 1000);
 
 logger.lowest('Not printed'); // too low of priority
