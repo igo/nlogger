@@ -1,13 +1,13 @@
 {
   "name": "cnlogger",
   "description": "Logging lib that prints module name and line number",
-  "version": "0.3.3",
-  "homepage": "https://github.com/bigbear/nlogger",
+  "version": "0.3.4",
+  "homepage": "https://github.com/schloerke/nlogger",
   "keywords": ["log", "logging", "logger", "custom", "color"],
-  "author": "Igor Urminček and Barret Schloerke",
+  "author": "Barret Schloerke and Igor Urminček",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/bigbear/nlogger.git"
+    "url": "git://github.com/schloerke/nlogger.git"
   }
 }
