@@ -1,7 +1,7 @@
 {
   "name": "cnlogger",
   "description": "Logging lib that prints module name and line number",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "homepage": "https://github.com/schloerke/nlogger",
   "keywords": ["log", "logging", "logger", "custom", "color"],
   "author": "Barret Schloerke and Igor Urminček",
