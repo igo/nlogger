@@ -13,7 +13,7 @@ Usage
 -----
 Use npm or download. Then add to your code:
 
-  var logger = require('nlogger').logger(module);
+  var logger = require('./nlogger').logger(module);
 
 *module* is object defined automatically by Node.js. If you don't want automatic module names, replace it with your desired string name.
 
@@ -25,7 +25,7 @@ Strings `{}` in message will be replaced by appropriate parameter. See examples.
 Examples
 --------
 
-  var logger = require('nlogger').logger(module);
+  var logger = require('./nlogger').logger(module);
   logger.info('Info message');
   logger.debug('Debug message');
   logger.warn('Warning message');
