@@ -1,4 +1,4 @@
-var logger = require('nlogger').logger(module);
+var logger = require('../../../lib/nlogger').logger(module);
 
 logger.mid('Message from first module from line #3');
 logger.two({one: 1, two: 2});

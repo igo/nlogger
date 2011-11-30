@@ -1,4 +1,4 @@
-var logger = require('nlogger').logger(module);
+var logger = require('../../../lib/nlogger').logger(module);
 
 logger.test("test");
 logger.lowest("lowest");
