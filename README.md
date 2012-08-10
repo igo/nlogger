@@ -70,6 +70,8 @@ Possible debug levels are `trace`, `debug`, `info`, `warn`, `error`.
 
 Changes
 -------
+0.3.1 - Fixed util dependencies
+
 0.3.0 - Added parameters support to logging methods
 
 0.2.0 - Added configuration file support
