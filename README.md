@@ -18,9 +18,7 @@ Use npm or download. Then add to your code:
 *module* is object defined automatically by Node.js. If you don't want automatic module names, replace it with your desired string name.
 
 	logger.info(message);
-	logger.info(message, parameter...);
-
-Strings `{}` in message will be replaced by appropriate parameter. See examples.  
+	logger.info(message, variable, message, variable...);
 
 Examples
 --------
@@ -31,7 +29,7 @@ Examples
 	logger.warn('Warning message');
 	logger.error('Error message');
 	logger.trace('Trace message');
-	logger.info('Array = {}, Object = {}', [1, 2, 3, 4], {one: 1, two: 2});
+	logger.info('Array = ', [1, 2, 3, 4], ', Object = ', {one: 1, two: 2});
 
 	
 Output samples
@@ -70,6 +68,8 @@ Possible debug levels are `trace`, `debug`, `info`, `warn`, `error`.
 
 Changes
 -------
+0.4.0 - Logging methods parameters changed
+
 0.3.1 - Fixed util dependencies
 
 0.3.0 - Added parameters support to logging methods
