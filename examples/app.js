@@ -1,6 +1,9 @@
 var logger = require('../lib/nlogger').logger(module);
 var first = require('./my-modules/first');
-var second = require('./my-modules/second');
+/**
+ * Example with runtime config - see module code
+ */
+var second = require('./my-modules/runtime-config');
 var third = require('./my-modules/third');
 
 setTimeout(function() {
