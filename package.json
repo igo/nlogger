@@ -1,7 +1,7 @@
 {
 	"name": "nlogger",
 	"description": "Logging lib that prints module name and line number",
-	"version": "0.4.0",
+	"version": "1.0.0",
 	"homepage": "https://github.com/igo/nlogger",
 	"keywords": ["log", "logging", "logger"],
 	"author": "Igor Urminček",
